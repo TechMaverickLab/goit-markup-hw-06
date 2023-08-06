@@ -446,8 +446,27 @@ body {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/Hero/people-office.jpeg);
+    url(../images/Hero/hero-image_mob@1x.png);
 }
+
+@media screen and (min-width: 480px) {
+  .page-hero {
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ), url(../images/Hero/hero-image_tab@1x.png);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-hero {
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ), url(../images/Hero/hero-image_desk@1x.png);
+  }
+}
+
 
 .hero-headline {
   width: 496px;
@@ -522,6 +541,7 @@ body {
   margin-top: 72px;
   column-gap: var(--gap-column);
 }
+
 
 /* ================================================================================= */
 /* SECTION 4 */
