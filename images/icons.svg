@@ -126,6 +126,11 @@
                 style="fill:var(--color1, #fff)" />
         </symbol>
 
+        <symbol id="mobile-menu" viewBox="0 0 47 32">
+            <path fill="none" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="4.3636"
+                stroke="#000" d="M1.961 29.154h42.965M1.961 15.615h42.965M1.961 2.077h42.965"></path>
+        </symbol>
+
 
     </defs>
 </svg>
