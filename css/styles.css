@@ -124,10 +124,27 @@ body {
 }
 
 .container {
-  max-width: 1158px;
+  min-width: 320px;
+  max-width: 448px;
   margin: 0 auto;
   padding: 0 15px;
 }
+
+
+@media screen and (min-width: 768px) {
+  .container {
+    /* Tablet screen : >= 768px */
+    max-width: 768px;
+  }
+  }
+
+ @media screen and (min-width: 1158px) {
+  .container { 
+    /* Desktop screen : >= 1158px */
+     max-width: 1158px;
+  }
+  } 
+
 
 /* ================================================================================= */
 
@@ -446,12 +463,72 @@ body {
   background-position: center;
   background-size: cover;
   background-color: var(--dark-color);
-  background-image: linear-gradient(
+  
+}
+
+@media only screen and (min-width: 428px) {
+    .page-hero {
+        background-image: linear-gradient(
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/Hero/hero-image_mob@1x.png);
+    }
+}
+
+@media only screen and (min-width: 428px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 428px) and (min-resolution: 192dpi) {
+    .page-hero {
+        background-image: linear-gradient(
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/Hero/hero-image_mob@2x.png);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .page-hero {
+        background-image: linear-gradient(
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/Hero/hero-image_tab@1x.png);
+    }
+}
+
+@media only screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 768px) and (min-resolution: 192dpi) {
+    .page-hero {
+        background-image: linear-gradient(
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/Hero/hero-image_tab@2x.png);
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .page-hero { 
+      background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/Hero/hero-image_desk@1x.png);
+    }
+  }
+  
+@media only screen and (min-width: 1158px) and (-webkit-min-device-pixel-ratio: 2), only screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+    .page-hero {
+        background-image: linear-gradient(
+            rgba(46, 47, 66, 0.7),
+            rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/Hero/hero-image_desk@2x.png);
+    }
 }
+
+
+
+
 
 .hero-headline {
   width: 496px;
@@ -479,6 +556,7 @@ body {
 }
 
 /* ================================================================================= */
+
 /* SECTION 2 */
 
 .feature-section {
@@ -505,6 +583,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
+}
+
+@media screen and (min-width: 1158px) {
+  .feature-pictures {
+    display: flex; /* Display for screens 1158 pixels and wider */
+  }
 }
 
 .feature-icons {
@@ -515,19 +600,27 @@ body {
 /* SECTION 3 */
 
 .work-section {
-  display: flex;
-  justify-content: center;
-  padding-bottom: var(--indent-sections);
+  display: none; /* Спочатку приховуємо для мобільних пристроїв */
 }
 
-.work-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 72px;
-  column-gap: var(--gap-column);
+@media screen and (min-width: 1158px) {
+  .work-section {
+    display: flex; /* Показуємо для екранів шириною 1158 пікселів і більше */
+    justify-content: center;
+    padding-bottom: var(--indent-sections);
+  }
+
+  .work-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 72px;
+    column-gap: var(--gap-column);
+  }
 }
+
 
 /* ================================================================================= */
+
 /* SECTION 4 */
 
 .worker-section {
@@ -538,8 +631,9 @@ body {
 
 .worker-list {
   display: flex;
-  flex-wrap: wrap;
-  column-gap: var(--gap-column);
+  flex-direction: column;
+  align-items: center; /* Вирівнюємо елементи по центру для мобільних пристроїв */
+  gap: 72px; /* Відступ між елементами */
 }
 
 .worker-item {
@@ -547,6 +641,26 @@ body {
   border-radius: 0px 0px var(--radius-butoon) var(--radius-butoon);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  /* Видаляємо width: 100% */
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .worker-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 64px; /* Відступ між рядками */
+    column-gap: 24px; /* Відступ між елементами в рядку */
+  }
+}
+
+/* Desktop (1158px і більше) */
+@media screen and (min-width: 1158px) {
+  .worker-list {
+    flex-wrap: wrap;
+    column-gap: var(--gap-column);
+  }
 }
 
 .worker-text {
@@ -577,6 +691,7 @@ body {
 }
 
 /* ================================================================================= */
+
 /* SECTION 5 */
 
 .customer-section {
@@ -587,9 +702,10 @@ body {
 
 .customer-list {
   display: flex;
+  flex-wrap: wrap; 
   align-items: center;
   justify-content: center;
-  gap: var(--gap-column);
+  gap: 72px 16px; 
 }
 
 .customer-link {
@@ -607,8 +723,30 @@ body {
 }
 
 .customer-calc {
-  width: calc((100% - 120px) / 6);
+  width: calc((100% - 16px) / 2); /* Розрахунок ширини для 2 колонок з урахуванням відступів */
   height: 88px;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .customer-list {
+    gap: 72px 24px; 
+  }
+
+  .customer-calc {
+    width: calc((100% - (2 * 24px)) / 3); 
+  }
+}
+
+/* Desktop (1158px і більше) */
+@media screen and (min-width: 1158px) {
+  .customer-list {
+    gap: var(--gap-column);
+  }
+
+  .customer-calc {
+    width: calc((100% - 120px) / 6);
+  }
 }
 
 .customer-link:hover,
@@ -629,6 +767,7 @@ body {
   border: none;
   fill: currentColor;
 }
+
 
 /* ================================================================================= */
 /**
