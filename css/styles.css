@@ -28,7 +28,6 @@ img {
   text-decoration: none;
   outline: none;
   display: block;
-  /* padding-top: 24px; */
   padding-bottom: 28px;
   position: relative;
 }
@@ -44,16 +43,7 @@ body {
   letter-spacing: 0.02em;
 }
 
-/* input[type="checkbox"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: none;
-  border: none;
-} */
-
 /* ==================================================================== */
-/* KOLOR */
 
 :root {
   --primary-brand-color: #4d5ae5;
@@ -137,6 +127,7 @@ body {
 
 /* ====================================== */
   /* SOCIAL */
+
 .social-cell {
   width: 40px;
   height: 40px;
@@ -199,7 +190,6 @@ body {
 }
 
 /* ================================================================================= */
-
 /* HEADER  */
 
 .header {
@@ -309,8 +299,8 @@ body {
 }
 
 /* =========================================== */
-
 /* FOOTER*/
+
 .subscribe-email:focus,
 .subscribe-email:focus-visible {
   outline-color: rgba(0, 0, 0, 0.15);
@@ -399,8 +389,13 @@ body {
 }
 
 .subscribe-email {
+  background: var(--dark-color);
+  border-radius: var(--radius-butoon);
+  border: 1px solid var(--hero-text);
+  opacity: 0.3;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   flex-grow: 1;
-  max-width: 398px;
+  min-width: 264px;
   padding: 8px 16px;
 }
 
@@ -419,14 +414,14 @@ body {
 @media screen and (max-width: 767px) {
     .subscribe-form {
         flex-direction: column;
-        align-items: stretch; /* змінити на stretch, щоб розтягнути елементи на всю доступну ширину */
-        padding: 0 15px; /* додати відступи для форми */
+        align-items: stretch; 
         gap: 0;
+        max-width: 398px;
     }
 
     .subscribe-email {
-        width: calc(100% - 30px); /* врахувати відступи з обох боків */
-        max-width: 398px;
+        width: calc(100% - 30px);
+        
     }
 
     .subscribe-button {
@@ -441,7 +436,6 @@ body {
 
 
   @media screen and (min-width: 768px) and (max-width: 1157px) {
-    /* Tablet screen : >= 768px */
     .container {
     max-width: 768px;
   }
@@ -490,7 +484,6 @@ body {
 
 
 @media screen and (min-width: 1158px) {
-      /* Desktop screen : >= 1158px */
   .container { 
      max-width: 1158px;
   }
@@ -554,7 +547,6 @@ body {
 
 
 /* ============================================================================== */
-/* PAGE STUDIO */
 
 /* SECTION 1 */
 .visually-hidden {
@@ -676,7 +668,6 @@ body {
 
 /* ================================================================================= */
 
-
 /* SECTION 2 */
 
 .feature-section {
@@ -725,12 +716,11 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 72px 24px; /* Gap for rows and columns */
+    gap: 72px 24px;
     padding: 0;
   }
   .feature-item {
     width: 356px;
-    /* margin-bottom: 72px; */
   }
   .headline.feature-text {
     text-align: left;
@@ -765,12 +755,12 @@ body {
 /* SECTION 3 */
 
 .work-section {
-  display: none; /* Спочатку приховуємо для мобільних пристроїв */
+  display: none;
 }
 
 @media screen and (min-width: 1158px) {
   .work-section {
-    display: flex; /* Показуємо для екранів шириною 1158 пікселів і більше */
+    display: flex; 
     justify-content: center;
     padding-bottom: var(--indent-sections);
   }
@@ -797,8 +787,8 @@ body {
 .worker-list {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Вирівнюємо елементи по центру для мобільних пристроїв */
-  gap: 72px; /* Відступ між елементами */
+  align-items: center; 
+  gap: 72px; 
 }
 
 .worker-item {
@@ -806,21 +796,19 @@ body {
   border-radius: 0px 0px var(--radius-butoon) var(--radius-butoon);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  /* Видаляємо width: 100% */
+ 
 }
 
-/* Tablet */
 @media screen and (min-width: 768px) {
   .worker-list {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    row-gap: 64px; /* Відступ між рядками */
-    column-gap: 24px; /* Відступ між елементами в рядку */
+    row-gap: 64px; 
+    column-gap: 24px; 
   }
 }
 
-/* Desktop (1158px і більше) */
 @media screen and (min-width: 1158px) {
   .worker-list {
     flex-wrap: wrap;
@@ -861,7 +849,6 @@ body {
 }
 
 /* ================================================================================= */
-
 /* SECTION 5 */
 
 .customer-section {
@@ -893,11 +880,10 @@ body {
 }
 
 .customer-calc {
-  width: calc((100% - 16px) / 2); /* Розрахунок ширини для 2 колонок з урахуванням відступів */
+  width: calc((100% - 16px) / 2);
   height: 88px;
 }
 
-/* Tablet */
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .customer-list {
     gap: 72px 24px; 
@@ -909,7 +895,6 @@ body {
   }
 }
 
-/* Desktop (1158px і більше) */
 @media screen and (min-width: 1158px) {
   .customer-list {
     gap: var(--gap-column);
@@ -1032,7 +1017,6 @@ body {
   background: var(--pressed-state-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  /* border: none; */
 }
 
 .finger-container {
@@ -1285,7 +1269,6 @@ display: block;
 margin-left: auto;
 margin-right: auto;
 padding: 16px 32px 16px 32px;
-/* margin-top: 24px;  */
 min-width: 169px;
 height: 56px;
 font-family: "Roboto", sans-serif;
@@ -1399,12 +1382,6 @@ input:checked + .checkbox-label > .checkbox-container {
     border: none;
     fill: var(--light-color); 
 }
-
-/* input:focus + .checkbox-label .unchecked-icon {
-    background-color: var(--pressed-state-color); 
-    border: none;
-    fill: var(--light-color); 
-} */
 
 input:focus + .checkbox-label .checked-icon {
     background-color: var(--pressed-state-color); 
