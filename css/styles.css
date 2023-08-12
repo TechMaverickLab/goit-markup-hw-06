@@ -287,6 +287,16 @@ body {
     display: none;
 }
 
+.menu-btn {
+    display: flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 0;
+}
+
 @media screen and (min-width: 768px) {
     .menu-btn {
         display: none;
@@ -320,6 +330,10 @@ body {
         line-height: 1.5;
         letter-spacing: 0.32px;
         gap: 40px;
+    }
+
+     .menu-btn {
+        display: none;
     }
 
     .nav-link.current::after {
@@ -1417,15 +1431,7 @@ input:focus + .checkbox-label .checked-icon {
 /* ================================================================================= */
 /* MOBILE WINDOW */
 
-.menu-btn {
-    display: flex;
-    align-items: center;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    margin-left: auto;
-    padding: 0;
-}
+
 
 .mobile-menu {
   position: fixed;
@@ -1528,12 +1534,12 @@ input:focus + .checkbox-label .checked-icon {
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 56px;
-  margin-bottom: 48px;
 }
 
 .mobile-menu .social-cell {
   width: 40px;
   height: 40px;
+  margin-bottom: 0 !important;
 }
 
 .mobile-menu .worker-link {
@@ -1567,14 +1573,17 @@ input:focus + .checkbox-label .checked-icon {
   margin-bottom: 40px;
 }
 
+.mobile-menu .address-list .address {
+  display: block !important; 
+}
+
 .mobile-menu .address-list {
-  display: none;
-  margin-bottom: 48px;
-  margin-top: 284px;
+  display: block;
+  margin-top: 288px;
 }
 
 .mobile-menu .address-list li {
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 .mobile-menu.is-open .address-list {
