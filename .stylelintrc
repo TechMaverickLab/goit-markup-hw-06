@@ -1,6 +1,13 @@
-{"css.validate": false,
-"less.validate": false,
-"scss.validate": false,
 
-  "extends": "stylelint-config-standard"
+
+{
+  "stylelint.config": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "no-duplicate-selectors": true
+    }
+  },
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false
 }
