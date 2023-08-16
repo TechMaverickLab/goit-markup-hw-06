@@ -131,22 +131,25 @@
         <h2 class="work">What are we doing</h2>
         <ul class="work-list">
           <li class="work-item">
-            <img srcset="
-                                        ./images/what_doing/img1_desk@1x.jpg 1158w,
-                                        ./images/what_doing/img1_desk@2x.jpg 2316w" sizes="1158px"
-              src="./images/what_doing/img1_desk@1x.jpg" alt="monitor" width="360" height="300" />
+            <picture>
+              <source media="(min-width: 1158px)"
+                srcset="./images/what_doing/img1_desk@1x.jpg, ./images/what_doing/img1_desk@2x.jpg 2x">
+              <img src="./images/what_doing/placeholder.png" alt="monitor" width="360" height="300" />
+            </picture>
           </li>
           <li class="work-item">
-            <img srcset="
-                                        ./images/what_doing/img2_desk@1x.jpg 1158w,
-                                        ./images/what_doing/img2_desk@2x.jpg 2316w" sizes="1158px"
-              src="./images/what_doing/img2_desk@1x.jpg" alt="mobile phone" width="360" height="300" />
+            <picture>
+              <source media="(min-width: 1158px)"
+                srcset="./images/what_doing/img2_desk@1x.jpg, ./images/what_doing/img2_desk@2x.jpg 2x">
+              <img src="./images/what_doing/placeholder.png" alt="mobile phone" width="360" height="300" />
+            </picture>
           </li>
           <li class="work-item">
-            <img srcset="
-                                        ./images/what_doing/img3_desk@1x.jpg 1158w,
-                                        ./images/what_doing/img3_desk@2x.jpg 2316w" sizes="1158px"
-              src="./images/what_doing/img3_desk@1x.jpg" alt="monitor and mobile phone" width="360" height="300" />
+            <picture>
+              <source media="(min-width: 1158px)"
+                srcset="./images/what_doing/img3_desk@1x.jpg, ./images/what_doing/img3_desk@2x.jpg 2x">
+              <img src="./images/what_doing/placeholder.png" alt="monitor and mobile phone" width="360" height="300" />
+            </picture>
           </li>
         </ul>
       </div>
@@ -356,7 +359,6 @@
         </ul>
       </div>
     </section>
-
 
     <!--*! Section 5 -->
 
