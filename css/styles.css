@@ -640,7 +640,6 @@ body {
   letter-spacing: 0.72px;
 }
     
-/* Mobile devices with screen width up to 768px */
 @media only screen and (max-width: 768px) {
     .page-hero {
         background-image: linear-gradient(
@@ -661,7 +660,6 @@ body {
     }
 }
 
-/* Tablet devices with screen width from 769px to 1157px */
 @media only screen and (min-width: 769px) and (max-width: 1157px){
     .page-hero {
         background-image: linear-gradient(
@@ -689,7 +687,6 @@ body {
     }
 }
 
-/* Desktop devices with screen width from 1158px and above */
 @media only screen and (min-width: 1158px) {
     .page-hero { 
       background-image: linear-gradient(
