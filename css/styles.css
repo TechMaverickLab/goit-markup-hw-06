@@ -805,6 +805,14 @@ body {
   text-transform: capitalize;
 }
 
+.worker-headline {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+}
+
  .feature-section .text {
   font-size: 16px;
   font-weight: 500;
@@ -826,6 +834,14 @@ body {
 
   .headline, .feature-text {
     text-align: left;
+  }
+
+  .worker-headline {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
   }
 }
 
@@ -861,7 +877,10 @@ body {
 
   .feature-section .text {
     font-weight: 400;
-  
+  }
+
+  .worker-headline {
+    text-align: center;
   }
 }
 
