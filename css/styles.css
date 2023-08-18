@@ -1639,6 +1639,39 @@ input:focus + .checkbox-label .checked-icon {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
+.modal-btn:hover {
+  animation: shake 1s;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  10% {
+    transform: rotate(-10deg);
+  }
+  
+  20% {
+    transform: rotate(10deg);
+  }
+  
+  30% {
+    transform: rotate(-10deg);
+  }
+  
+  40% {
+    transform: rotate(10deg);
+  }
+  
+  50% {
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    transform: rotate(0deg);
+  }
+}
 
 /* ================================================================================= */
 
@@ -1848,6 +1881,41 @@ input:focus + .checkbox-label .checked-icon {
   padding: 0;
   text-decoration: none;
   list-style: none;
+}
+
+
+.mobile-menu-close:hover {
+  animation: shake 1s;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  10% {
+    transform: rotate(-10deg);
+  }
+  
+  20% {
+    transform: rotate(10deg);
+  }
+  
+  30% {
+    transform: rotate(-10deg);
+  }
+  
+  40% {
+    transform: rotate(10deg);
+  }
+  
+  50% {
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 
